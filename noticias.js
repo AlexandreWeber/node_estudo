@@ -10,7 +10,7 @@ let server = http.createServer((req, res) => {
             break;
         case '/moda':
             res.end('<html><body><p>Moda</p></html></body>');
-            break;
+            break; 
         default:
             res.end('<html><body><p>Portal</p></html></body>');
             break;
