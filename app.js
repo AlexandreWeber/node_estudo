@@ -1,9 +1,9 @@
 let express = require('express');
-
 let app = express();
+app.set('view engine', 'ejs');
 
-app.get('/', ((req, res) => {
-    res.send('<h1>Olá</h1>')
+app.get('/tec', ((req, res) => {
+    res.render('secao/tecnologia');s
 }));
 
 app.listen(3000, () => {
