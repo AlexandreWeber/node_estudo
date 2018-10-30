@@ -15,6 +15,7 @@ let server = http.createServer((req, res) => {
             res.end('<html><body><p>Portal</p></html></body>');
             break;
     }
+    
 });
 
 server.listen(3000);
