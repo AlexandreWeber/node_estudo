@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AlexandreWeber/node_estudo/issues"
   },
-  "homepage": "https://github.com/AlexandreWeber/node_estudo#readme"
+  "homepage": "https://github.com/AlexandreWeber/node_estudo#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
