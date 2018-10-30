@@ -1,19 +1,9 @@
-let express = require('express');
-let app = express();
-app.set('view engine', 'ejs');
 
-app.get('/', ((req, res) => {
-    res.render('home/index');
-}));
-
-app.get('/formulario_inclusao_noticia', ((req, res) => {
-    res.render('admin/form_add_noticia');
-}));
-
-app.get('/noticias', ((req, res) => {
-    res.render('noticias/noticias');
-}));
+let app = require('./config/server');
+let rota_home = require('./app/routes/home')(app);
+let rota_noticias = require('./app/routes/noticias')(app);
+let rota_form = require('./app/routes/formulario_inclusao_noticia')(app);
 
 app.listen(3000, () => {
-    console.log('express');
+    console.log('Servidor no ar');
 });
