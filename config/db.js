@@ -1,9 +1,14 @@
 let mysql = require('mysql');
-module.exports = (() => {
+
+let connMySql = () => {
     return mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: 'root',
         database: 'portal_noticias'
     });
+}
+
+module.exports = (() => {
+    return connMySql;
 });
