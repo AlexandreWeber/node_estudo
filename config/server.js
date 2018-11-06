@@ -11,12 +11,15 @@ app.use(bodyParser.urlencoded(
     { extended: true }
 ));
 
+app.use(express.static('./app/public'))
+
 app.use(expressValidator());
 
 consign()
     .include('app/routes')
     .then('config/db.js')
     .then('app/models')
+    .then('app/controllers')
     .into(app);
 
 
